@@ -11,15 +11,20 @@ body{
     text-align: center;
     color: white;
     font-family: poppins;
-    padding: 5%;
+    padding: 8% 1.5%;
 }
 .container{
     margin: auto;
 }
 
-.heading h1{
-    font-size: 32px;
-    padding: 1em;
+.main, .box-section{
+    margin: 8px;
+}
+
+.heading{
+    font-size: 27px;
+    font-weight: 700;
+    padding: 15px;
 }
 
 .box-section{
@@ -61,7 +66,7 @@ input{
     color: hsl(249, 10%, 26%);
 }
 
-input#button{
+button{
     background-color: hsl(154, 59%, 51%);
     color: white;
     border: 1px solid hsl(154, 59%, 51%);
@@ -69,8 +74,14 @@ input#button{
     letter-spacing: 1px;
     cursor: pointer;
     box-shadow: 0 3px hsl(154, 88%, 31%);
+    width: 100%;
+    padding: 1em;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    margin-top: 1.5em;
 }
-input#button:active{
+button:active{
     background-color: hsl(154, 60%, 60%);
     box-shadow: 0 3px hsl(154, 59%, 51%);
 }
@@ -119,21 +130,34 @@ input#button:active{
 @media only screen and (min-width: 768px){
     body{
         background-image: url(bg-intro-desktop.png);
-        padding: 10%;
+        padding: 8% 3%;
+    }
+
+    .heading{
+        padding: 15px 15px 30px 0;
+        font-size: 40px;
+        font-weight: 900;
     }
 
     .container{
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
         height: 100vh;
     }
 
     section.main{
-        width: 50%;
+        width: 450px;
+        text-align: justify;
     }
 
     section.box-section{
-        width: 50%;
+        width: 450px;
+    }
+}
+
+@media only screen and (min-width: 1280px){
+    .main, .box-section{
+        width: 800px;
     }
 }

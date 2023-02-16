@@ -1,11 +1,13 @@
 //variables
-const Btn = document.querySelector('#button')
 const firstname = document.querySelector('#firstname')
 const lastname = document.querySelector('#lastname')
 const email = document.querySelector('#email')
 const password = document.querySelector('#password')
+const form = document.querySelector('form')
 
-Btn.addEventListener('click', ()=>{
+form.addEventListener('submit', (e)=>{
+    e.preventDefault()
+
     if(firstname.value === ''){
         errorDisplay(firstname, 'First name cannot be empty')
     }else{
